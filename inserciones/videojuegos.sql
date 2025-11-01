@@ -14,3 +14,9 @@ insert into videojuegos (codigo, nombre, descripcion, valoracion) values
 (4, 'Minecraft', 'A sandbox game that allows players to build and explore virtual worlds made of blocks.', 8),
 (5, 'Among Us', 'A multiplayer party game where players work together to complete tasks while trying to identify impostors.', 7);
 select * from videojuegos;
+
+insert into videojuegos (codigo,nombre) values
+(6, 'dota'),
+(7, 'the last of us'),
+(8, 'resident evil');
+select * from videojuegos;
