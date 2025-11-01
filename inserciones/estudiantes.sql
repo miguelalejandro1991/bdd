@@ -7,7 +7,7 @@ create table estuduantes(
     constraint estudiantes_pk primary key (cedula)
 )
 
--- crea 8 inserciones de ejemplo
+
 insert into estuduantes (cedula, nombre, apellido, email, fecha_nacimiento) values
 ('1234567890', 'Juan', 'Perez', 'juan@perez.com', '1995-05-15'),
 ('0987654321', 'Maria', 'Gomez', 'maria@gomez.es', '1996-08-22'),
