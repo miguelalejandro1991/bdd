@@ -19,3 +19,16 @@ insert into registros_entrada (codigo_registro, cedula_empleado, fecha, hora) va
 (9, '1234567890', '2023-01-02', '08:05:00'),
 (10, '0987654321', '2023-01-02', '08:20:00');
 select * from registros_entrada;
+
+-- crear un select que traiga todas las cedulas de empleados, fecha y hora de los registros de entrada 
+select cedula_empleado, fecha, hora from registros_entrada;
+
+-- crear un select que traiga los registros de entrada que esten entre las 7:00 y las 14:00
+select * from registros_entrada
+where hora between '07:00:00' and '14:00:00';
+
+--seleccionar los registros de entrada que tengan horas superiores a las 8:00
+select * from registros_entrada
+where hora > '08:00:00';
+
+
