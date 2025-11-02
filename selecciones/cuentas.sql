@@ -20,3 +20,18 @@ insert into cuentas (numero_cuenta, cedula_propietario, fecha_creacion, saldo) v
 ('00010', '1213141516', '2020-10-29', 2900.80);
 
 select * from cuentas;
+
+-- crear un select que traiga el numero de cuenta y el saldo de toda las cuentas
+select numero_cuenta, saldo from cuentas;
+
+--crear un select que traiga los registros entre el dia de hoy hasta 2 meses antes 
+select * from cuentas
+where fecha_creacion 
+between '01/09/2025' and '01/11/2025';
+
+--crear un select que traiga el numero de cuenta y el saldo de las cuentas desde el dia de hoy hasta 2 meses antes
+select numero_cuenta, saldo from cuentas
+where fecha_creacion 
+between '01/09/2025' and '01/11/2025';
+
+
