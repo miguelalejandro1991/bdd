@@ -18,3 +18,15 @@ insert into estuduantes (cedula, nombre, apellido, email, fecha_nacimiento) valu
 ('8899001122', 'Diego', 'Torres', 'diego@torres.com', '1994-09-25'),
 ('9900112233', 'Elena', 'Flores', 'elena@florez.com', '1997-01-14');
 select * from estuduantes;
+
+-- crear un select que traiga el nombre y la cedula de los estudiantes
+select nombre, cedula from estudiantes;
+
+--crear un select que traiga los nombres de todos los estudiantes cuya cedula empiece con 17
+select nombre from estudiantes
+where cedula like '17%';
+
+--crear un select que traiga los nombres completos de todos los estudiantes cuyo nombre empiece con a
+select nombre, apellido from estudiantes
+where nombre like 'A%';
+
