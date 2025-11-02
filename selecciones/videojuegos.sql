@@ -20,3 +20,15 @@ insert into videojuegos (codigo,nombre) values
 (7, 'the last of us'),
 (8, 'resident evil');
 select * from videojuegos;
+
+-- seleccionar todos los videojuegos con un nombre que comience con "c"
+select * from videojuegos
+where nombre like 'c%';
+
+-- seleccionar videojuegos con una valoracion entre 9 y 10 
+select * from videojuegos
+where valoracion between 9 and 10;
+
+--seleccionar videojuegos con una descripcion null
+select * from videojuegos
+where descripcion is null;
