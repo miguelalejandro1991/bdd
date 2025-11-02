@@ -21,3 +21,15 @@ insert into transacciones (codigo, numero_cuenta, monto, tipo, fecha, hora) valu
 (9, '00009', 450.60, 'C', '2023-01-18', '18:00:00'),
 (10, '00010', 150.80, 'D', '2023-01-19', '19:15:00');
 select * from transacciones;
+
+-- seleccionar todas las transacciones realizadas con un tipo D
+select * from transacciones
+where tipo = 'D';
+
+-- seleccionar las transacciones con montos entre 200 y 2000
+select * from transacciones
+where monto between 200::money and 2000::money;  --se realiza la conversion a tipo money
+
+-- seleccionar el codigo, monto, tipo y fecha de las transacciones que tengan una fecha diferente de null
+select codigo, monto, tipo, fecha from transacciones
+where fecha is not null;
