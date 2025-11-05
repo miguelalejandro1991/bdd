@@ -72,3 +72,11 @@ values(95124, '74125', 900, 'D', '23/10/2002', '9:00');
 
 insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
 values(54143, '85213', 2000, 'C', '11/09/1999', '7:30');
+
+--seleccionar transacciones de tipo C realizadas por los clientes con numero de cuentas entre 222001 y 22004
+select * from transacciones
+where tipo = 'C' and numero_cuenta between '222001' and '22004';
+
+--seleccionar transacciones de tipo D que fueron realizadas el 25 de mayo y con el rango de cuenta entre 22007 y 22010
+select * from transacciones
+where tipo = 'D' and fecha = '2023-05-25'   and numero_cuenta between '22007' and '22010';

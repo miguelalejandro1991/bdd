@@ -77,4 +77,21 @@ where nombre ='Sofia' or nombre ='Carlos'  or nombre ='Diego'
 select * from estuduantes 
 where (nombre='Ana' or nombre='Luis') and apellido = 'Martinez'
 
+/*seleccionar el nombre y apellido de los estudiantes cuyos nombres empiecen con M o si su apellido
+termina con z*/
+select nombre, apellido from estuduantes
+where nombre like 'M%' or apellido like '%z';
+
+/*crear un select que traiga los nombres de todos los estudiantes que tengan un numero 32 y empiece con 18
+en alguna parte de su cedula*/
+
+select nombre from estuduantes
+where cedula like '18%32%';
+
+/* crear un select que traiga los nombres completos de todos los estudiantes cuya cedula termine
+en 06 o empiece con 17 */
+select nombre, apellido from estuduantes
+where cedula like '%06' or cedula like '17%';
+
+
 

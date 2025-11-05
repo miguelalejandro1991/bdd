@@ -71,3 +71,13 @@ values(63240, 'Crash', 'juego de deprote', 9);
 
 insert into videojuegos(codigo, nombre, descripcion, valoracion)
 values(63549, 'Dragon Ball', 'juego de baile', 8);
+
+/* listar los registros de videojuegos con un nombre que contenga la letra "C" o una valoracion de 7*/
+select * from videojuegos
+where nombre like '%C%' or valoracion = 7;
+
+/*seleccionar videojuegos con un codigo entre 3 y 7 o una valoracion de 7*/
+select * from videojuegos
+where (codigo between 3 and 7) or valoracion = 7;
+
+

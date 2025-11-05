@@ -61,4 +61,19 @@ values (25577,17512,'15/08/2025',3500);
 insert into cuentas (numero_cuenta,cedula_propietario,fecha_creacion,saldo)
 values (25578,17503,'15/06/2017',4500);
 
+--seleccionar el numero de cuenta y saldo de todas las cuentas con saldo mayor a 100  y menor a 1000
+select numero_cuenta, saldo from cuentas
+where saldo > 100::money and saldo < 1000::money;
+
+--seleccionar las cuentas entre el dia de hoy y hasta hace 1 año 
+select * from cuentas
+where fecha_creacion (
+    between '01/09/2023' and '01/09/2024'
+);
+
+-- seleccionar las cuentas con saldo 0 o con una cedula de propietario que termine con 2
+select * from cuentas
+where saldo = 0::money or cedula_propietario like '%2';
+
+
 

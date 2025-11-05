@@ -52,3 +52,15 @@ INSERT INTO productos (codigo, nombre, descripcion, precio, stock) VALUES (15, '
 INSERT INTO productos (codigo, nombre, descripcion, precio, stock) VALUES (16, 'leche', 1000.00, 1.30, 45);
 INSERT INTO productos (codigo, nombre, descripcion, precio, stock) VALUES (17, 'arroz', 1000.00, 2.10, 80);
 INSERT INTO productos (codigo, nombre, descripcion, precio, stock) VALUES (18, 'aceite', 900.00, 3.00, 20);
+
+--seleccionar todos los productos con stock igual a 10 y precio menor a 10
+select * from productos
+where stock = 10 and precio < 10::money;
+
+-- seleccionar los nombres y stock de todos los productos que tengan un "m" en su nombre o tengan un espacio en blanco en su descripcion
+select nombre, stock from productos
+where nombre like '%m%' or descripcion like '% %';
+
+--seleccionar el nombre de todos los productos que tenga null el campo de descripcion o tengan stock de 0
+select nombre from productos
+where descripcion is null or stock = 0;

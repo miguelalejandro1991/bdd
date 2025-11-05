@@ -68,3 +68,24 @@ values(12358, '1712546328', '07/07/2008', '21:00');
 
 insert into registros_entrada(codigo_registro, cedula_empleado, fecha, hora)
 values(12378, '1725785413', '02/09/2023', '4:00');
+
+
+/* seleccione los registros del mes de septiembre, o realizados por las cedulas de pichincha 
+(que indiquen con 17) */
+select * from registros_entrada
+where (
+    EXTRACT(MONTH FROM fecha) = 9
+    OR cedula LIKE '17%'
+);
+
+
+/* seleccione los registros del mes de agosto, realizados por las cedulas de pichincha (que inicien con 17)
+y realizados entre las 08:00 a 12:00*/
+select * from registros_entrada
+where (
+    EXTRACT(MONTH FROM fecha) = 8
+    AND cedula_empleado LIKE '17%'
+    AND hora BETWEEN '08:00:00' AND '12:00:00'
+);
+
+

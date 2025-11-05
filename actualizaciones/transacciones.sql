@@ -58,7 +58,7 @@ values(32165, '51437', 1050, 'D', '25/04/2020', '15:48');
 insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
 values(78542, '02147', 300, 'D', '20/03/2019', '22:19');
 
-insert into transacciones(codigo, numero_cuenta, monto, tipo, hora)
+insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
 values(23210, '32015', 400, 'C', '02/11/2025' , '13:55');
 
 insert into transacciones(codigo, numero_cuenta, monto, tipo, fecha, hora)
